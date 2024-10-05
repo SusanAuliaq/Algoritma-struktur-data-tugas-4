@@ -1,0 +1,40 @@
+def input_matrix(n):
+matrix = []
+for i in range(n):
+row = list(map(int, input(f"Input row {i + 1} (separated by space): ").split()))
+matrix.append(row)
+return matrix
+
+def multiply_matrices(A, B):
+n = len(A)
+result = [[0 for _ in range(n)] for _ in range(n)]
+
+for i in range(n):
+    for j in range(n):
+        for k in range(n):
+            result[i][j] += A[i][k] * B[k][j]
+return result
+def main():
+n = int(input("Input order of matrices (min 3): "))
+
+if n < 3:
+    print("Orde matriks minimal adalah 3x3")
+    return
+
+print("Input matriks A:")
+A = input_matrix(n)
+
+print("Input matriks B:")
+B = input_matrix(n)
+
+if len(A[0]) != len(B):
+    print("Matriks tidak dapat dikalikan")
+    return
+
+hasil = multiply_matrices(A, B)
+
+print("Matriks Hasil:")
+for row in hasil:
+    print(" ".join(map(str, row)))
+if name == "main":
+main()
