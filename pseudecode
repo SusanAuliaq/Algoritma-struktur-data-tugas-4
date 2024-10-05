@@ -1,0 +1,30 @@
+Mulai
+Deklarasi matriks A, B, dan Hasil
+Input Ordo Matriks (n)
+
+Jika n < 3 maka
+    Tampilkan "Ordo matriks minimal adalah 3x3"
+    Kembali ke Mulai
+Akhir Jika
+
+Input matriks A (n x n)
+Input matriks B (n x n)
+
+Jika Kolom A != Baris B maka
+    Tampilkan "Matriks tidak dapat dikalikan"
+    Kembali ke Mulai
+Akhir Jika
+
+Inisialisasi matriks Hasil dengan ukuran n x n
+
+Untuk i dari 0 sampai n-1 lakukan
+    Untuk j dari 0 sampai n-1 lakukan
+        Hasil[i][j] = 0
+        Untuk k dari 0 sampai n-1 lakukan
+            Hasil[i][j] = Hasil[i][j] + A[i][k] * B[k][j]
+        Akhir Untuk
+    Akhir Untuk
+Akhir Untuk
+
+Tampilkan Matriks Hasil
+Selesai
